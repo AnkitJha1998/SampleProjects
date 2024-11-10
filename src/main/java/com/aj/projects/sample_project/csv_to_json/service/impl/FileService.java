@@ -52,7 +52,7 @@ public class FileService implements IFileService {
         return response;
     }
 
-    protected Optional<File> saveFileToDisc(MultipartFile multipartFile) {
+    public Optional<File> saveFileToDisc(MultipartFile multipartFile) {
         try {
             String fileName = getFileName(multipartFile);
             File file = new File(fileLoc + File.separator + fileName);
